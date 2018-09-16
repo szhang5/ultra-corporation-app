@@ -1,0 +1,133 @@
+
+#circle-group {
+    bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height:0;
+}
+
+/*-- KEYFRAMES --*/
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -50%;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/*-- ANIMATIONS --*/
+
+.x1 {
+	animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: -5%;
+	top: 5%;
+	background: radial-gradient(ellipse at center, #f4d6039e 0%, #ffffff00 70%);
+	transform: scale(0.6);
+}
+
+.x2 {
+	animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 5%;
+	top: 80%;
+	background: radial-gradient(ellipse at center, #8bc34a 0%, #ffffff00 70%);
+	transform: scale(0.4);
+}
+
+.x3 {
+	animation: animateBubble 28s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	left: 10%;
+	top: 40%;
+	background: radial-gradient(ellipse at center, #795548 0%, #ffffff00 70%);
+	transform: scale(0.7);
+}
+
+.x4 {
+	animation: animateBubble 13s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	left: 20%;
+	top: 0;
+	background: radial-gradient(ellipse at center, #ff9800 0%, #ffffff00 70%);
+	transform: scale(0.3);
+}
+
+.x5 {
+	animation: animateBubble 29s linear infinite, sideWays 6s ease-in-out infinite alternate;
+	left: 30%;
+	top: 50%;
+	background: radial-gradient(ellipse at center, #9c27b0 0%, #ffffff00 70%);
+	transform: scale(0.5);
+}
+
+.x6 {
+	animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 50%;
+	top: 0;
+	background: radial-gradient(ellipse at center, #9e9e9e 0%, #ffffff00 70%);
+	transform: scale(0.8);
+}
+
+.x7 {
+	animation: animateBubble 15s linear infinite, sideWays 5s ease-in-out infinite alternate;
+	left: 65%;
+	top: 70%;
+	background: radial-gradient(ellipse at center, #e91e63 0%, #ffffff00 70%);
+	transform: scale(0.4);
+}
+
+.x8 {
+	animation: animateBubble 13s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	left: 80%;
+	top: 10%;
+	background: radial-gradient(ellipse at center, #ffeb3b 0%, #ffffff00 70%);
+	transform: scale(0.5);
+}
+
+.x9 {
+	animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 90%;
+	top: 50%;
+	background: radial-gradient(ellipse at center, #00bcd4d4 0%, #ffffff00 70%);
+	transform: scale(0.6);
+}
+
+.x10 {
+	animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 60%;
+	top: 80%;
+	background: radial-gradient(ellipse at center, #1059de9c 0%, #ffffff00 70%);
+	transform: scale(0.3);
+}
+
+/*-- OBJECTS --*/
+
+.circle {
+	border-radius: 50%;
+	/*box-shadow: 0 20px 30px #00000033, inset 0px 10px 30px 5px #ffffff;*/
+    height: 200px;
+    width: 200px;
+	position: absolute;
+}
+
+.circle:after {
+    background: radial-gradient(ellipse at center, #ffffff80 0%,#ffffff00 70%); 
+	border-radius: 50%;
+	/*box-shadow: inset 0 20px 30px #ffffff4d;*/
+	content:'';
+    height: 180px;
+	left: 10px;
+	position: absolute;
+	width: 180px;
+}
+
