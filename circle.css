@@ -105,10 +105,90 @@
 .x10 {
 	animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
 	left: 60%;
-	top: 80%;
+	top: 0;
 	background: radial-gradient(ellipse at center, #1059de9c 0%, #ffffff00 70%);
 	transform: scale(0.3);
 }
+
+/*.x11 {
+	animation: animateBubble 12s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 15%;
+	top: 65%;
+	background: radial-gradient(ellipse at center, #cadc14 0%, #ffffff00 70%);
+	transform: scale(0.4);
+}
+
+.x12 {
+	animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 25%;
+	top: 35%;
+	background: radial-gradient(ellipse at center, #f44336 0%, #ffffff00 70%);
+	transform: scale(0.5);
+}
+
+.x13 {
+	animation: animateBubble 17s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 35%;
+	top: 33%;
+	background: radial-gradient(ellipse at center, #1b99d6 0%, #ffffff00 70%);
+	transform: scale(0.6);
+}
+
+.x14 {
+	animation: animateBubble 24s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 20%;
+	top: 20%;
+	background: radial-gradient(ellipse at center, #9e9e9e 0%, #ffffff00 70%);
+	transform: scale(0.7);
+}
+
+.x15 {
+	animation: animateBubble 13s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 45%;
+	top: 68%;
+	background: radial-gradient(ellipse at center, #ff9800 0%, #ffffff00 70%);
+	transform: scale(0.2);
+}
+
+.x16 {
+	animation: animateBubble 24s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 19%;
+	top: 26%;
+	background: radial-gradient(ellipse at center, #4d12b5 0%, #ffffff00 70%);
+	transform: scale(0.7);
+}
+
+.x17 {
+	animation: animateBubble 10s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 29%;
+	top: 23%;
+	background: radial-gradient(ellipse at center, #1059de9c 0%, #ffffff00 70%);
+	transform: scale(0.2);
+}
+
+.x18 {
+	animation: animateBubble 9s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 89%;
+	top: 66%;
+	background: radial-gradient(ellipse at center, #009688 0%, #ffffff00 70%);
+	transform: scale(0.1);
+}
+
+.x19 {
+	animation: animateBubble 14s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 47%;
+	top: 30%;
+	background: radial-gradient(ellipse at center, #4e7d17 0%, #ffffff00 70%);
+	transform: scale(0.3);
+}
+
+.x20 {
+	animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	left: 59%;
+	top: 70%;
+	background: radial-gradient(ellipse at center, #10cbde 0%, #ffffff00 70%);
+	transform: scale(0.3);
+}*/
 
 /*-- OBJECTS --*/
 
