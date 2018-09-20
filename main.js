@@ -59,7 +59,7 @@ function showCart(e, id) {
    if(item) {
     item.parentNode.removeChild(item);
    }
-    for(var key in cartItems){
+    for(let key in cartItems){
       let priceValue = cartItems[key].price.slice(1);
       console.log(priceValue);
       total += parseFloat(priceValue) * cartItems[key].count;
@@ -156,6 +156,52 @@ if (radioGroup) {
   radioGroup.addEventListener( 'change', changeSide );
 }
 
+
+/*************************/  
+/*-- NARBAR FUNCTION --*/
+/*************************/
+window.onscroll = function changeNav() {
+  let nav = document.querySelector('nav');
+  if (window.pageYOffset > 200) {
+    nav.className = 'navbar-show';
+  } else {
+    nav.className = '';
+  }
+}
+
+/*************************/  
+/*-- HAMBUGER FUNCTION --*/
+/*************************/
+let nav = document.querySelector('.js--nav-icon');
+let navIcon = document.querySelector('.js--nav-icon i');
+let mainNav = document.querySelector('.main-nav');
+if (nav) {
+  nav.addEventListener('click', function () {
+    navIcon.classList.toggle('fa-times');
+    navIcon.classList.toggle('fa-bars');
+
+    if (mainNav.classList.contains('is-visible')) {
+        mainNav.classList.remove('is-visible');
+    } else {
+      // let getHeight = function () {
+      //   mainNav.style.display = 'block'; 
+      //   let height = mainNav.scrollHeight + 'px'; 
+      //   mainNav.style.display = ''; 
+      //   return height;
+      // };
+      mainNav.style.display = 'block'; 
+      let height = mainNav.scrollHeight + 'px'; 
+      mainNav.style.display = ''; 
+      // let height = getHeight(); 
+      mainNav.classList.add('is-visible'); 
+      mainNav.style.height = height; 
+
+      // window.setTimeout(function () {
+      //   mainNav.style.height = '';
+      // }, 350);
+    }
+  });
+}
 
 
 
