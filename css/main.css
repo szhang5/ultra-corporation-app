@@ -115,8 +115,7 @@ h2 {
 }
 
 .gridText {
-text-align: left;
-
+  text-align: left;
 }
 
 .header-box {
@@ -207,6 +206,12 @@ img:hover{
   grid-row-gap: 10px;
   grid-template-columns: 25% 75%;
   margin:0% auto;
+}
+
+.grid-container-of-2-cart {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-bottom: 1px solid #0000001a;
 }
 
 
@@ -345,7 +350,7 @@ hr {
 /*********************************/
 .shopping-cart-summary {
   border: 1px solid #0000001a;
-  width: 20%;
+  width: 280px;
   left: 75%;
   margin-top: 1%;
   z-index: 1;
@@ -359,16 +364,37 @@ hr {
 
 }
 
+.description {
+  padding: 0 3%;
+  text-align: left;
+}
+
+.description h5 {
+  margin: 0;
+  margin-top: 10%;
+}
+
+.cartText {
+  font-size: 12px;
+  margin: 0;
+  margin-top: 3%;
+  font-weight: 700;
+}
+
+
 table {
   font-size: 14px;
   width: 100%;
+}
+
+tfoot > th {
+  font-weight: 700;
 }
 
 th {
     padding: 3% 5%;
     width: 70%;
     text-align: left;
-    font-weight: normal;
 }
 
 td {

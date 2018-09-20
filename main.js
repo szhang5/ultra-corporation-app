@@ -48,7 +48,51 @@ function addToCart(e, id) {
 /**********************************/
 function showCart(e, id) {
   let summary = document.querySelector(`.${id}`);
-  // console.log(summary);
+  let cart = summary.querySelector('cart-total');
+  let item = summary.querySelector('grid-container-of-2-cart');
+  let html='';
+  let total = 0;
+  if(cartCount > 0) {
+   if(cart){
+    cart.parentNode.removeChild(cart);
+   } 
+   if(item) {
+    item.parentNode.removeChild(item);
+   }
+    for(var key in cartItems){
+      let priceValue = cartItems[key].price.slice(1);
+      console.log(priceValue);
+      total += parseFloat(priceValue) * cartItems[key].count;
+      html += '<div class="grid-container-of-2-cart">' +
+              `<img src="${cartItems[key].image}" width="100%">` +
+              '<div class="description">' +
+              `<h5>${cartItems[key].title}</h5>` +
+              `<p class="cartText">${cartItems[key].price}</p>`+
+              `<p class="cartText" style="font-weight:300;">Quantity: ${cartItems[key].count}</p>`+
+              '</div>' + 
+              '</div>'
+      }
+      html += '<table class="order-total">' +
+              '<tbody>' +
+              '<tr>' +
+              '<th class="cartText" style="font-weight:300; padding: 1% 5%;">ORDER VALUE:</th>' +
+              `<td class="cartText" style="font-weight:300;">${total}</td>` +
+              '</tr>' +  
+              '<tr>' +
+              '<th class="cartText" style="font-weight:300; padding: 1% 5%;">STANDAND SHIPPING:</th>' +
+              '<td class="cartText" style="font-weight:300;">FREE</td>' +
+              '</tr>' +   
+              '</tbody>' +
+              '<tfoot>' +
+              '<tr>' +
+              '<th class="cartText" style="padding: 3% 5%;">TOTAL</th>' +
+              `<td class="cartText">${total}</td>` +
+              '</tr>' +
+              '</tfoot>' +
+              '</table>'
+        summary.innerHTML = html;
+    }
+  console.log(summary);
   summary.style.display = "block";
 }
 
