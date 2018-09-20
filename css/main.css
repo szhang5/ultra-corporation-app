@@ -117,7 +117,7 @@ header.shopping-page{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: #fffffffa;
   box-shadow: 0 2px 2px #efefef;
   z-index: 9999;
 }
@@ -127,7 +127,7 @@ header.shopping-page{
 }
 
 .navbar-show .main-nav li a {
-  padding: 16px 0;
+  padding: 10px 0;
   color: #555;
 }
 
