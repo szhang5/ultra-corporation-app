@@ -99,7 +99,8 @@ function showCart(e, id) {
 function hideCart(e, id) {
   let summary = document.querySelector(`.${id}`);
   // console.log(summary);
-  summary.style.display = "none";
+  setTimeout(function(){summary.style.display = "none";}, 3000);
+  
 }
 
 
@@ -121,10 +122,10 @@ if (radioGroup) {
         radio[count].checked = true;
         radioGroup.dispatchEvent(new Event('change'));
     } else {
-      count = 0;
+      count = -1;
     }
     
-  }, 3000);
+  }, 2000);
 
 
   function changeSide() {

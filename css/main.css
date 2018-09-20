@@ -13,6 +13,14 @@ section{
   padding-top: 5%;
 }
 
+section.reasons {
+  margin-bottom: 7%;
+}
+
+section.reasons .grid-container-of-2{
+  margin-top: 5%;
+}
+
 section.shopping-cart-section {
   margin-bottom: 7%;
 }
@@ -354,7 +362,7 @@ hr {
   left: 75%;
   margin-top: 1%;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   background: white;
   display: none;
 }
@@ -514,57 +522,65 @@ div.paddle {
 /******************/
 
 .scene {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto; 
   perspective: 400px;
 }
 
 .cube {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: relative;
   transform-style: preserve-3d;
-  transform: translateZ(-100px);
+  transform: translateZ(-75px);
   transition: transform 1s;
 }
 
-.cube.show-1 { transform: translateZ(-100px) rotateY(   0deg); }
-.cube.show-2 { transform: translateZ(-100px) rotateY( -90deg); }
-.cube.show-3 { transform: translateZ(-100px) rotateY(-180deg); }
-.cube.show-4 { transform: translateZ(-100px) rotateY(  90deg); }
-.cube.show-5 { transform: translateZ(-100px) rotateX( -90deg); }
-.cube.show-6 { transform: translateZ(-100px) rotateX(  90deg); }
+.cube.show-1 { transform: translateZ(-75px) rotateY(   0deg); }
+.cube.show-2 { transform: translateZ(-75px) rotateX(  90deg); }
+.cube.show-3 { transform: translateZ(-75px) rotateY(-180deg); }
+.cube.show-4 { transform: translateZ(-75px) rotateX( -90deg); }
+.cube.show-5 { transform: translateZ(-75px) rotateY( -90deg); }
+.cube.show-6 { transform: translateZ(-75px) rotateY(  90deg); }
+
+
 
 .cube-face {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  font-size: 32px;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
   text-align: center;
-  background: #f4d601e6;
+  
 }
 
 .cube-face-1 { 
-  transform: rotateY(  0deg) translateZ(100px); 
+  background: #f4d601e6;
+  transform: rotateY(  0deg) translateZ(75px); 
 }
 .cube-face-2 { 
-  transform: rotateY( 90deg) translateZ(100px); 
+  background: #e2413fe6;
+  transform: rotateX(-90deg) translateZ(75px); 
 }
 .cube-face-3 { 
-  transform: rotateY(180deg) translateZ(100px); 
+  background: #03f4b6e6;
+  transform: rotateY(180deg) translateZ(75px); 
 }
 .cube-face-4 { 
-  transform: rotateY(-90deg) translateZ(100px); 
+  background: #792b92e6;
+  transform: rotateX( 90deg) translateZ(75px); 
 }
 .cube-face-5 { 
-  transform: rotateX( 90deg) translateZ(100px); 
+  background: #3e15dae6;
+  transform: rotateY( 90deg) translateZ(75px); 
 }
 .cube-face-6 { 
-  transform: rotateX(-90deg) translateZ(100px); 
+  background: #8a7878e6;
+  transform: rotateY(-90deg) translateZ(75px); 
 }
 
 
@@ -584,7 +600,7 @@ div.paddle {
 
 .reason {
   padding: 0 3%;
-  height: 60%;
+  height: 73%;
 }
 
 .reason-1 { border: 4px dotted #f4d601; }
