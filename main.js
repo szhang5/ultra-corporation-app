@@ -8,154 +8,110 @@ function goBackToHomepage() {
 	window.location.href = "homepage.html";
 }
 
-/***************************/	
+
+/***************************/   
 /*-- IMAGE FLIP FUNCTION --*/
 /***************************/
-function changeImg(e){
-	// alert("click");
-	let id = parseInt(e.id, 10);
-	let image = $(`#${id}`);
-	let src = image.attr('src');
-	// console.log(src);
-    switch(id){
-		case 1: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536970022/artifical_flower2.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-				        $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536956841/hw2/artifical_flower.jpg');
-				      }).on('load', function(){
-				        $(this).stop().animate({opacity:'1'});
-				      });
-		        } 
-		        if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536956841/hw2/artifical_flower.jpg' ){
-		        	image.stop().animate({opacity:'0'},function(){
-				        $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536970022/artifical_flower2.jpg');
-				      }).on('load', function(){
-				        $(this).stop().animate({opacity:'1'});
-				      });
-		        }
-						break; 
-		case 2: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536970175/Chinese_style2.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536956841/hw2/Chinese_style_home_accessories.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536956841/hw2/Chinese_style_home_accessories.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536970175/Chinese_style2.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 3: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536956842/hw2/decoration.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536970411/thinking_decoration.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536970411/thinking_decoration.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536956842/hw2/decoration.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 4: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536969884/painting2.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536957651/hw2/painting1.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536957651/hw2/painting1.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536969884/painting2.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 5: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536971290/vase2.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536971290/vase1.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536971290/vase1.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536971290/vase2.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 6: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536957766/hw2/kiss-painting.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536969767/kiss-painting2.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536969767/kiss-painting2.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536957766/hw2/kiss-painting.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 7: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536968809/hw2/desk-decoration2.png'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536958188/hw2/desk-decoration.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536958188/hw2/desk-decoration.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536968809/hw2/desk-decoration2.png');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 8: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536958188/hw2/wall-decoration.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536969561/wall-decoration2.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536969561/wall-decoration2.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536958188/hw2/wall-decoration.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break; 
-		case 9: if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536971534/vase3.jpg'){
-							image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536971534/vase4.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            } 
-            if(src === 'https://res.cloudinary.com/zoey1111/image/upload/v1536971534/vase4.jpg'){
-            	image.stop().animate({opacity:'0'},function(){
-                $(this).attr('src', 'https://res.cloudinary.com/zoey1111/image/upload/v1536971534/vase3.jpg');
-            	}).on('load', function(){
-                $(this).stop().animate({opacity:'1'});
-            	});
-            }
-						break;
-		default: break;		
-	}
+function flipImg(e) {
+    e.classList.toggle('flipped');
 }
+
+
+/****************************/    
+/*-- ADD TO CART FUNCTION --*/
+/****************************/
+let cartCount = 0;
+const cartItems = {};
+function addToCart(e, id) {
+  cartCount++;
+  const product = document.querySelector(`#${id}`);
+  const image = product.querySelector('.card-face-front img').src;
+  const title = product.querySelector('h3').innerHTML;
+  const price = product.querySelector('p').innerHTML;
+  if (cartItems[id]) {
+    cartItems[id].count++;
+  } else {
+    cartItems[id] = {
+      id,
+      image,
+      title,
+      price,
+      count: 1,
+    };
+  }
+  // console.log(cartItems);
+  document.querySelector('#countItem').innerHTML = cartCount;
+}
+
+/**********************************/    
+/*-- SHOW CART SUMMARY FUNCTION --*/
+/**********************************/
+function showCart(e, id) {
+  let summary = document.querySelector(`.${id}`);
+  // console.log(summary);
+  summary.style.display = "block";
+}
+
+function hideCart(e, id) {
+  let summary = document.querySelector(`.${id}`);
+  // console.log(summary);
+  summary.style.display = "none";
+}
+
+
+/***********************/    
+/*-- ROTATE FUNCTION --*/
+/***********************/
+
+let cube = document.querySelector('.cube');
+let radioGroup = document.querySelector('.radio-group');
+let reason = document.getElementsByClassName('reason');
+let currentClass = '';
+if (radioGroup) {
+  let count = 0;
+  let radio = $("input[type=radio]");
+  setInterval(function() {
+    count++;
+    if(count < radio.length){
+      // console.log(count);
+        radio[count].checked = true;
+        radioGroup.dispatchEvent(new Event('change'));
+    } else {
+      count = 0;
+    }
+    
+  }, 3000);
+
+
+  function changeSide() {
+    if (!radioGroup) {
+      return;
+    }
+    let checkedRadio = radioGroup.querySelector(':checked');
+    let showClass = 'show-' + checkedRadio.value;
+
+
+    for(let i = 0; i < reason.length; i++) {
+      if(i === (parseInt(checkedRadio.value, 10)-1)) {
+        reason[i].hidden = false;
+      } else {
+        reason[i].hidden = true;
+      }
+    }
+
+    if ( currentClass ) {
+      cube.classList.remove( currentClass );
+    }
+    cube.classList.add( showClass );
+    currentClass = showClass;
+  }
+
+  changeSide();
+
+  radioGroup.addEventListener( 'change', changeSide );
+}
+
+
 
 
 /**********************************/	
@@ -170,6 +126,10 @@ function changeImg(e){
 // 	let hpHeader = document.querySelector("header.homepage");
 //   hpHeader.classList.remove("background");
 // }
+
+
+
+
 
 
 
