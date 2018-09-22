@@ -183,22 +183,20 @@ if (nav) {
     if (mainNav.classList.contains('is-visible')) {
         mainNav.classList.remove('is-visible');
     } else {
-      // let getHeight = function () {
-      //   mainNav.style.display = 'block'; 
-      //   let height = mainNav.scrollHeight + 'px'; 
-      //   mainNav.style.display = ''; 
-      //   return height;
-      // };
-      mainNav.style.display = 'block'; 
-      let height = mainNav.scrollHeight + 'px'; 
-      mainNav.style.display = ''; 
-      // let height = getHeight(); 
+      let getHeight = function () {
+        mainNav.style.display = 'block'; 
+        let height = mainNav.scrollHeight + 'px'; 
+        mainNav.style.display = ''; 
+        return height;
+      };
+      
+      let height = getHeight(); 
       mainNav.classList.add('is-visible'); 
       mainNav.style.height = height; 
 
-      // window.setTimeout(function () {
-      //   mainNav.style.height = '';
-      // }, 350);
+      window.setTimeout(function () {
+        mainNav.style.height = '';
+      }, 350);
     }
   });
 }
