@@ -17,6 +17,7 @@ function flipImg(e) {
 }
 
 
+let summary = document.querySelector('.shopping-cart-summary');
 /****************************/    
 /*-- ADD TO CART FUNCTION --*/
 /****************************/
@@ -41,13 +42,30 @@ function addToCart(e, id) {
   }
   // console.log(cartItems);
   document.querySelector('#countItem').innerHTML = cartCount;
+  cartSummary();
+  summary.style.display = "block";
+  setTimeout(function(){
+    summary.style.display = "none";
+  }, 1000)
+
 }
 
 /**********************************/    
 /*-- SHOW CART SUMMARY FUNCTION --*/
 /**********************************/
 function showCart(e, id) {
-  let summary = document.querySelector(`.${id}`);
+  // let summary = document.querySelector(`.${id}`);
+  if(summary.style.display === "block"){
+    summary.style.display = "none";
+  } else {
+    cartSummary();
+    // console.log(summary);
+    summary.style.display = "block";
+    }
+}
+
+
+function cartSummary() {
   let cart = summary.querySelector('cart-total');
   let item = summary.querySelector('grid-container-of-2-cart');
   let html='';
@@ -61,8 +79,9 @@ function showCart(e, id) {
    }
     for(let key in cartItems){
       let priceValue = cartItems[key].price.slice(1);
-      console.log(priceValue);
+      // console.log(priceValue);
       total += parseFloat(priceValue) * cartItems[key].count;
+      total = Math.round(total*100)/100;
       html += '<div class="grid-container-of-2-cart">' +
               `<img src="${cartItems[key].image}" width="100%">` +
               '<div class="description">' +
@@ -92,15 +111,6 @@ function showCart(e, id) {
               '</table>'
         summary.innerHTML = html;
     }
-  console.log(summary);
-  summary.style.display = "block";
-}
-
-function hideCart(e, id) {
-  let summary = document.querySelector(`.${id}`);
-  // console.log(summary);
-  setTimeout(function(){summary.style.display = "none";}, 3000);
-  
 }
 
 
@@ -125,7 +135,7 @@ if (radioGroup) {
       count = -1;
     }
     
-  }, 2000);
+  }, 1500);
 
 
   function changeSide() {
@@ -162,10 +172,12 @@ if (radioGroup) {
 /*************************/
 window.onscroll = function changeNav() {
   let nav = document.querySelector('nav');
-  if (window.pageYOffset > 200) {
-    nav.className = 'navbar-show';
-  } else {
-    nav.className = '';
+  if(nav) {
+    if (window.pageYOffset > 200) {
+      nav.className = 'navbar-show';
+    } else {
+      nav.className = '';
+    }
   }
 }
 

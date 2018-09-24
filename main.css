@@ -37,8 +37,8 @@ header#header{
   text-align: center;
 }
 
-header.homepage{
-  background-image: linear-gradient(#00000099, #00000099), url(../image/background.jpeg);
+header#header{
+  background-image: linear-gradient(#00000099, #00000099), url(https://res.cloudinary.com/zoey1111/image/upload/v1537581734/hw2/background2.png);
 }
 
 .fa-chevron-left,
@@ -522,6 +522,7 @@ td {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -629,27 +630,33 @@ div.paddle {
 
 .cube-face-1 { 
   background: #f4d601e6;
-  transform: rotateY(  0deg) translateZ(75px); 
+  transform: rotateY(0deg) translateZ(75px); 
+  -webkit-transform: rotateY(0deg) translateZ(75px); 
 }
 .cube-face-2 { 
   background: #e2413fe6;
   transform: rotateX(-90deg) translateZ(75px); 
+  -webkit-transform: rotateX(-90deg) translateZ(75px);
 }
 .cube-face-3 { 
   background: #03f4b6e6;
   transform: rotateY(180deg) translateZ(75px); 
+  -webkit-transform: rotateY(180deg) translateZ(75px); 
 }
 .cube-face-4 { 
   background: #792b92e6;
-  transform: rotateX( 90deg) translateZ(75px); 
+  transform: rotateX(90deg) translateZ(75px); 
+  -webkit-transform: rotateX(90deg) translateZ(75px); 
 }
 .cube-face-5 { 
   background: #3e15dae6;
-  transform: rotateY( 90deg) translateZ(75px); 
+  transform: rotateY(90deg) translateZ(75px); 
+  -webkit-transform: rotateY(90deg) translateZ(75px); 
 }
 .cube-face-6 { 
   background: #8a7878e6;
   transform: rotateY(-90deg) translateZ(75px); 
+  -webkit-transform: rotateY(-90deg) translateZ(75px); 
 }
 
 

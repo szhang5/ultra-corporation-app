@@ -27,16 +27,20 @@
   }
   .img-scene {
     width: 100%;
-    height: 400px;
+    height: 245px;
   }
 
 }
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px){
-  header.homepage {
+  .img-scene {
+    width: 100%;
+    height: 745px;
+  }
+
+  header#header {
     background-attachment: inherit;
-    background-position: left;
   }
 
   h1.title {
@@ -91,6 +95,20 @@
   }
   .shopping-cart-summary {
     left: 30%;
+    width: 230px;
+    position: fixed;
+  }
+
+  .shopping-cart-summary h5 {
+    font-size: 12px;
+  }
+
+  .shopping-cart-summary table {
+    font-size: 11px;
+  }
+
+  .shopping-cart-summary .description {
+    padding: 10px 10%;
   }
 
   /* mobile nav */
@@ -143,7 +161,9 @@
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
-
+  header#header {
+    background-attachment: inherit;
+  }
   h1.title {
     font-size: 2.7rem;
   }
@@ -153,7 +173,7 @@
   }
   .img-scene {
     width: 100%;
-    height: 360px;
+    height: 400px;
   }
 }
 
